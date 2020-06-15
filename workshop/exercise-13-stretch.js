@@ -21,3 +21,19 @@
 
 // (Correct answer: 12586269025)
 // (The numbers get big quickly!)
+
+let a = 0;
+let b = 1;
+
+for (p = 0; p <= 50; p++) {
+  if (p === 0) {
+    sum = 0;
+  } else if (p === 1) {
+    sum = 1;
+  } else {
+    sum = a + b;
+    a = b;
+    b = sum;
+  }
+}
+console.log(sum);
