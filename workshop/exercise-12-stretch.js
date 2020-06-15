@@ -12,3 +12,18 @@
 // NOTE: 1 and 2 are both prime numbers.
 
 // EXPECTED OUTPUT: [1, 2, 3, 5, 7, 11, 13, ...]
+
+for (num = 1; num <= 200; num++) {
+  let divisible = false;
+  if (num <= 2) {
+    divisible = false;
+  }
+  for (i = 2; i < num; i++) {
+    if (num % i === 0) {
+      divisible = true;
+    }
+  }
+  if (divisible == false) {
+    console.log(num);
+  }
+}
